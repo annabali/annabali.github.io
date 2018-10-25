@@ -1,0 +1,205 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+.clearfix:before,
+.clearfix:after,
+.section:before,
+.section:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.section:after {
+  clear: both;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font: 16px / 1.4 'Helvetica Neue', 'Roboto', Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+@media (max-width: 900px) {
+  body {
+    padding: 0 2em;
+  }
+}
+.layout {
+  width: 900px;
+  margin-left: 7%;
+  padding: 2em 0;
+}
+@media (max-width: 1060px) {
+  .layout {
+    margin-left: 0;
+  }
+}
+@media (max-width: 900px) {
+  .layout {
+    width: auto;
+  }
+}
+a {
+  color: #039fc9;
+}
+a:hover {
+  color: #f27d2c;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-weight: 300;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  line-height: 1.2;
+}
+h1,
+.h1 {
+  font-size: 49px;
+  font-size: 3rem;
+}
+h2,
+.h2 {
+  font-size: 33px;
+  font-size: 2rem;
+}
+h3,
+.h3 {
+  font-size: 25px;
+  font-size: 1.5rem;
+}
+h4,
+.h4 {
+  font-size: 17px;
+  font-size: 1rem;
+}
+h5,
+.h5 {
+  font-size: 17px;
+  font-size: 1rem;
+}
+h6,
+.h6 {
+  font-size: 15px;
+  font-size: 0.85rem;
+}
+p {
+  margin-bottom: 1em;
+}
+p + ul,
+p + ol {
+  margin-top: -0.9em;
+}
+ul,
+ol {
+  line-height: 1.2;
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+ul li,
+ol li {
+  margin-bottom: .2em;
+}
+dt {
+  font-weight: 600;
+}
+dd {
+  margin-bottom: .5em;
+}
+.header {
+  margin-bottom: 5em;
+  padding-left: 35%;
+}
+@media (max-width: 900px) {
+  .header {
+    padding-left: 0;
+  }
+}
+.person {
+  margin-bottom: 1em;
+}
+.person__avatar {
+  float: right;
+  max-width: 200px;
+  margin-top: 3.5rem;
+}
+.person__name {
+  padding-top: .5em;
+  text-indent: 2px;
+}
+.person__role {
+  font-size: 25px;
+  font-size: 1.5rem;
+}
+.links {
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+  font-size: 0.8rem;
+}
+.links__item_source {
+  margin-top: 1.25em;
+}
+.section {
+  margin-bottom: 3em;
+}
+.section-heading {
+  float: left;
+  width: 35%;
+  padding-right: 15%;
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .section-heading {
+    float: none;
+    width: auto;
+    margin-bottom: .75em;
+    padding-right: 0;
+    font-size: 1.75rem;
+    text-align: left;
+  }
+}
+.section-heading__text {
+  display: inline-block;
+  padding-bottom: .25em;
+  border-bottom: 5px solid #eeeeee;
+}
+.section-body {
+  overflow: hidden;
+}
+.experience__item {
+  margin-bottom: 2em;
+}
+.experience__header {
+  margin-bottom: 1em;
+  padding-bottom: .25em;
+  border-bottom: 1px solid #eee;
+}
+.experience__period {
+  font-weight: 700;
+}
+.experience__role {
+  font-style: italic;
+}

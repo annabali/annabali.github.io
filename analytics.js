@@ -34,22 +34,29 @@
   }
 
   function trackContactClick(channel, utm) {
-    if (typeof window.plausible !== 'function') return;
-
-    window.plausible('Contact Click', {
-      props: {
-        channel: channel,
-        source: utm.utm_source || 'direct',
-        medium: utm.utm_medium || 'none',
-        campaign: utm.utm_campaign || 'none',
-        page_lang: document.documentElement.lang || 'unknown'
-      }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'contact_click',
+      channel: channel,
+      source: utm.utm_source || 'direct',
+      medium: utm.utm_medium || 'none',
+      campaign: utm.utm_campaign || 'none',
+      page_lang: document.documentElement.lang || 'unknown'
     });
   }
 
   function bindContactTracking() {
     var utm = getCurrentUtm();
     var links = document.querySelectorAll('[data-contact-channel]');
+    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer.push({
+      event: 'portfolio_visit',
+      source: utm.utm_source || 'direct',
+      medium: utm.utm_medium || 'none',
+      campaign: utm.utm_campaign || 'none',
+      page_lang: document.documentElement.lang || 'unknown'
+    });
 
     links.forEach(function (link) {
       link.addEventListener('click', function () {

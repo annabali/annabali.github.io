@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="filters.js" defer></script>
 </head>
 <body>
   <main class="page">
@@ -27,9 +28,43 @@
     </p>
 
     <section class="table_card">
-      <div class="table_title">Кейс-портфолио</div>
+      <div class="filters" data-table-filters>
+        <div class="filter_block">
+          <p>Фильтр: Компетенции</p>
+          <div class="filter_chips">
+            <button class="filter_chip purple" type="button" data-group="competency" data-value="product_analytics">product analytics</button>
+            <button class="filter_chip violet" type="button" data-group="competency" data-value="funnel_analysis">funnel analysis</button>
+            <button class="filter_chip orange" type="button" data-group="competency" data-value="ab_testing">A/B testing</button>
+            <button class="filter_chip pink" type="button" data-group="competency" data-value="sql_python">SQL/Python</button>
+            <button class="filter_chip purple" type="button" data-group="competency" data-value="bi">BI</button>
+            <button class="filter_chip violet" type="button" data-group="competency" data-value="superset_tableau">superset/tableau</button>
+            <button class="filter_chip orange" type="button" data-group="competency" data-value="data_marts">data marts</button>
+            <button class="filter_chip pink" type="button" data-group="competency" data-value="automation">автоматизация</button>
+            <button class="filter_chip purple" type="button" data-group="competency" data-value="predictive_analytics">predictive analytics</button>
+            <button class="filter_chip violet" type="button" data-group="competency" data-value="etl">ETL</button>
+            <button class="filter_chip orange" type="button" data-group="competency" data-value="data_quality">data quality</button>
+            <button class="filter_chip pink" type="button" data-group="competency" data-value="retail">retail</button>
+            <button class="filter_chip purple" type="button" data-group="competency" data-value="risk_analytics">risk analytics</button>
+            <button class="filter_chip violet" type="button" data-group="competency" data-value="dash_python">dash/python</button>
+            <button class="filter_chip orange" type="button" data-group="competency" data-value="gini_psi_ssi">GINI/PSI/SSI</button>
+            <button class="filter_chip pink" type="button" data-group="competency" data-value="regulatory_reporting">regulatory reporting</button>
+          </div>
+        </div>
+
+        <div class="filter_block">
+          <p>Фильтр: Роль</p>
+          <div class="filter_chips">
+            <button class="filter_chip role_chip" type="button" data-group="role" data-value="product_analyst">Product Analyst</button>
+            <button class="filter_chip role_chip" type="button" data-group="role" data-value="product_data_analyst">Product/Data Analyst</button>
+            <button class="filter_chip role_chip" type="button" data-group="role" data-value="data_analyst">Data Analyst</button>
+          </div>
+        </div>
+
+        <button class="reset_btn" type="button" data-reset-filters>Сбросить фильтры</button>
+      </div>
+
       <div class="table_wrap">
-        <table>
+        <table data-portfolio-table>
           <thead>
             <tr>
               <th>Проект</th>
@@ -39,7 +74,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr data-competencies="product_analytics,funnel_analysis,ab_testing,sql_python" data-role="product_analyst">
               <td>
                 <div class="project_name">Оптимизация пути клиента в сделке (M2)</div>
               </td>
@@ -59,7 +94,7 @@
               <td><span class="role">Product Analyst</span></td>
             </tr>
 
-            <tr>
+            <tr data-competencies="bi,superset_tableau,data_marts,automation" data-role="product_data_analyst">
               <td>
                 <div class="project_name">Self-service BI и KPI-дашборды (M2)</div>
               </td>
@@ -79,7 +114,7 @@
               <td><span class="role">Product/Data Analyst</span></td>
             </tr>
 
-            <tr>
+            <tr data-competencies="predictive_analytics,etl,data_quality,retail" data-role="data_analyst">
               <td>
                 <div class="project_name">Улучшение предиктивной модели в Retail SaaS</div>
               </td>
@@ -99,7 +134,7 @@
               <td><span class="role">Data Analyst</span></td>
             </tr>
 
-            <tr>
+            <tr data-competencies="risk_analytics,dash_python,gini_psi_ssi,regulatory_reporting" data-role="data_analyst">
               <td>
                 <div class="project_name">BI-платформа мониторинга риск-моделей (ВТБ)</div>
               </td>
@@ -121,6 +156,8 @@
           </tbody>
         </table>
       </div>
+
+      <p class="empty_state" data-empty-state hidden>По текущим фильтрам проектов не найдено.</p>
     </section>
   </main>
 </body>

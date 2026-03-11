@@ -41,6 +41,25 @@ a {
   color: #fff;
 }
 
+.lang_switch {
+  min-width: 640px;
+  max-width: 1080px;
+  margin: 20px auto 0 auto;
+  text-align: right;
+  color: #949495;
+}
+
+.lang_link {
+  color: #949495;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lang_link.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .contacts, .education, .projects, .about, .work {
   min-width: 640px;
   max-width: 1080px;
@@ -52,7 +71,7 @@ a {
 }
 
 .contacts {
-  min-height: 400px;
+  min-height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,15 +82,13 @@ a {
   flex-direction: column;
 }
 
-.contacts_block p{
-  padding: 32px 0;
+.contacts_block p {
+  padding: 16px 0;
   text-align: center;
 }
 
-.photo {
-  width: 300px;
-  height: auto;
-  margin: 0 auto;
+.contact_line {
+  font-size: 14px;
 }
 
 .icons_block {
@@ -110,35 +127,70 @@ a {
   text-align: left;
 }
 
-.education_block_left {
-  width: 200px;
-  min-width: 200px;
-}
-
+.education_block_left,
 .work_block_left {
   width: 200px;
   min-width: 200px;
 }
 
-.education_block_right {
-  width: 100%;
-}
-
+.education_block_right,
 .work_block_right {
   width: 100%;
-}
-
-.project_block {
-  width: 100%;
-  margin-top: 16px;
-}
-
-.project_block p {
-  padding: 8px 0;
-  text-align: left;
 }
 
 .about p {
   text-align: left;
   padding: 8px 0;
+}
+
+.projects_table_wrap {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.projects_table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #949495;
+}
+
+.projects_table th,
+.projects_table td {
+  border: 1px solid #3a3a3a;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.projects_table th {
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .lang_switch,
+  .contacts,
+  .education,
+  .projects,
+  .about,
+  .work {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .work_block,
+  .education_block {
+    flex-direction: column;
+  }
+
+  .education_block_left,
+  .work_block_left {
+    width: 100%;
+    min-width: 0;
+  }
+
+  ul {
+    width: 100%;
+    padding-left: 18px;
+  }
 }

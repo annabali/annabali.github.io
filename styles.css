@@ -65,6 +65,37 @@ a {
   color: var(--link);
 }
 
+.contact_bar {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: #bcbcb8;
+}
+
+.contact_bar a {
+  color: #e2e2de;
+  text-decoration: none;
+  border-bottom: 1px solid #3c3c3a;
+}
+
+.contact_bar a:hover {
+  border-bottom-color: #c9c9c4;
+}
+
+.utm_hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #9a9a96;
+  word-break: break-word;
+}
+
+.utm_hint a {
+  color: #babab5;
+}
+
 .table_card {
   margin-top: 24px;
   border: 2px solid var(--line-strong);

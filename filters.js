@@ -17,6 +17,17 @@
 
     var selectedCompetencies = new Set();
 
+    function trackFilter(action, value) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'filter_used',
+        filter_action: action,
+        filter_value: value || 'none',
+        selected_competencies: Array.from(selectedCompetencies).join(',') || 'none',
+        page_lang: document.documentElement.lang || 'unknown'
+      });
+    }
+
     function applyFilters() {
       var visibleCount = 0;
 
@@ -45,6 +56,7 @@
         else selectedCompetencies.delete(value);
 
         applyFilters();
+        trackFilter(isActive ? 'select' : 'deselect', value);
       });
     });
 
@@ -57,6 +69,7 @@
         });
 
         applyFilters();
+        trackFilter('reset', 'all');
       });
     }
 

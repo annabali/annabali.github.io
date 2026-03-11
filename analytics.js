@@ -33,21 +33,8 @@
     return readStoredUtm();
   }
 
-  function trackContactClick(channel, utm) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'contact_click',
-      channel: channel,
-      source: utm.utm_source || 'direct',
-      medium: utm.utm_medium || 'none',
-      campaign: utm.utm_campaign || 'none',
-      page_lang: document.documentElement.lang || 'unknown'
-    });
-  }
-
-  function bindContactTracking() {
+  function bindPortfolioTracking() {
     var utm = getCurrentUtm();
-    var links = document.querySelectorAll('[data-contact-channel]');
     window.dataLayer = window.dataLayer || [];
 
     window.dataLayer.push({
@@ -57,14 +44,7 @@
       campaign: utm.utm_campaign || 'none',
       page_lang: document.documentElement.lang || 'unknown'
     });
-
-    links.forEach(function (link) {
-      link.addEventListener('click', function () {
-        var channel = link.getAttribute('data-contact-channel') || 'unknown';
-        trackContactClick(channel, utm);
-      });
-    });
   }
 
-  document.addEventListener('DOMContentLoaded', bindContactTracking);
+  document.addEventListener('DOMContentLoaded', bindPortfolioTracking);
 })();

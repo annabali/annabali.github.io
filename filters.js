@@ -1,8 +1,4 @@
 (function () {
-  function toSet(values) {
-    return new Set(values);
-  }
-
   function parseList(raw) {
     if (!raw) return [];
     return raw.split(',').map(function (item) {
@@ -20,24 +16,19 @@
     var emptyState = root.querySelector('[data-empty-state]');
 
     var selectedCompetencies = new Set();
-    var selectedRoles = new Set();
 
     function applyFilters() {
       var visibleCount = 0;
 
       rows.forEach(function (row) {
         var rowCompetencies = parseList(row.getAttribute('data-competencies'));
-        var rowRole = row.getAttribute('data-role');
 
         var competencyMatch = selectedCompetencies.size === 0 || rowCompetencies.some(function (item) {
           return selectedCompetencies.has(item);
         });
 
-        var roleMatch = selectedRoles.size === 0 || selectedRoles.has(rowRole);
-
-        var visible = competencyMatch && roleMatch;
-        row.style.display = visible ? '' : 'none';
-        if (visible) visibleCount += 1;
+        row.style.display = competencyMatch ? '' : 'none';
+        if (competencyMatch) visibleCount += 1;
       });
 
       if (emptyState) {
@@ -47,17 +38,11 @@
 
     chips.forEach(function (chip) {
       chip.addEventListener('click', function () {
-        var group = chip.getAttribute('data-group');
         var value = chip.getAttribute('data-value');
         var isActive = chip.classList.toggle('active');
 
-        if (group === 'competency') {
-          if (isActive) selectedCompetencies.add(value);
-          else selectedCompetencies.delete(value);
-        } else if (group === 'role') {
-          if (isActive) selectedRoles.add(value);
-          else selectedRoles.delete(value);
-        }
+        if (isActive) selectedCompetencies.add(value);
+        else selectedCompetencies.delete(value);
 
         applyFilters();
       });
@@ -65,8 +50,7 @@
 
     if (resetBtn) {
       resetBtn.addEventListener('click', function () {
-        selectedCompetencies = toSet([]);
-        selectedRoles = toSet([]);
+        selectedCompetencies.clear();
 
         chips.forEach(function (chip) {
           chip.classList.remove('active');

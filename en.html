@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Anna Balitskaia: Case Portfolio">
   <title>Anna Balitskaia: Case Portfolio</title>
-  <link rel="shortcut icon" href="favicon_my.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="filters.js" defer></script>
 </head>
@@ -24,7 +23,7 @@
 
     <p class="lead">
       This table contains selected analytics projects I worked on.
-      Each case highlights competencies, project context, and my role.
+      Each case highlights competencies and project context.
     </p>
 
     <section class="table_card">
@@ -51,15 +50,6 @@
           </div>
         </div>
 
-        <div class="filter_block">
-          <p>Filter: Role</p>
-          <div class="filter_chips">
-            <button class="filter_chip role_chip" type="button" data-group="role" data-value="product_analyst">Product Analyst</button>
-            <button class="filter_chip role_chip" type="button" data-group="role" data-value="product_data_analyst">Product/Data Analyst</button>
-            <button class="filter_chip role_chip" type="button" data-group="role" data-value="data_analyst">Data Analyst</button>
-          </div>
-        </div>
-
         <button class="reset_btn" type="button" data-reset-filters>Reset filters</button>
       </div>
 
@@ -70,11 +60,10 @@
               <th>Project</th>
               <th>Competencies</th>
               <th>Description</th>
-              <th>Role</th>
             </tr>
           </thead>
           <tbody>
-            <tr data-competencies="product_analytics,funnel_analysis,ab_testing,sql_python" data-role="product_analyst">
+            <tr data-competencies="product_analytics,funnel_analysis,ab_testing,sql_python">
               <td>
                 <div class="project_name">Deal Journey Optimization (M2)</div>
               </td>
@@ -91,10 +80,9 @@
                 I performed funnel and cohort analysis, segmented users, proposed product hypotheses, and supported A/B tests.
                 A subset of changes was shipped to production and improved the customer journey.
               </td>
-              <td><span class="role">Product Analyst</span></td>
             </tr>
 
-            <tr data-competencies="bi,superset_tableau,data_marts,automation" data-role="product_data_analyst">
+            <tr data-competencies="bi,superset_tableau,data_marts,automation">
               <td>
                 <div class="project_name">Self-service BI and KPI Dashboards (M2)</div>
               </td>
@@ -111,10 +99,9 @@
                 This reduced dependency on ad-hoc requests and shortened decision cycles.
                 I also automated recurring reporting flows.
               </td>
-              <td><span class="role">Product/Data Analyst</span></td>
             </tr>
 
-            <tr data-competencies="predictive_analytics,etl,data_quality,retail" data-role="data_analyst">
+            <tr data-competencies="predictive_analytics,etl,data_quality,retail">
               <td>
                 <div class="project_name">Predictive Model Improvement in Retail SaaS</div>
               </td>
@@ -130,10 +117,9 @@
                 To improve shelf-availability predictions, I redesigned analytical pipelines and introduced stronger data quality controls.
                 I also set up monitoring for critical processing stages, which stabilized model behavior and improved business impact.
               </td>
-              <td><span class="role">Data Analyst</span></td>
             </tr>
 
-            <tr data-competencies="risk_analytics,dash_python,gini_psi_ssi,regulatory_reporting" data-role="data_analyst">
+            <tr data-competencies="risk_analytics,dash_python,gini_psi_ssi,regulatory_reporting">
               <td>
                 <div class="project_name">Risk Model Monitoring BI Platform (VTB)</div>
               </td>
@@ -150,7 +136,6 @@
                 By automating data collection and metric calculation, I significantly accelerated model quality checks
                 for the DS team and simplified regulatory reporting preparation.
               </td>
-              <td><span class="role">Data Analyst</span></td>
             </tr>
           </tbody>
         </table>

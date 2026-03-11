@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Балицкая Анна: Кейс-портфолио">
   <title>Балицкая Анна: Кейс-портфолио</title>
-  <link rel="shortcut icon" href="favicon_my.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="filters.js" defer></script>
 </head>
@@ -24,7 +23,7 @@
 
     <p class="lead">
       В этой таблице собраны ключевые аналитические проекты, в которых я участвовала.
-      Для каждого кейса выделены компетенции, описание задачи и роль.
+      Для каждого кейса выделены компетенции и описание задачи.
     </p>
 
     <section class="table_card">
@@ -51,15 +50,6 @@
           </div>
         </div>
 
-        <div class="filter_block">
-          <p>Фильтр: Роль</p>
-          <div class="filter_chips">
-            <button class="filter_chip role_chip" type="button" data-group="role" data-value="product_analyst">Product Analyst</button>
-            <button class="filter_chip role_chip" type="button" data-group="role" data-value="product_data_analyst">Product/Data Analyst</button>
-            <button class="filter_chip role_chip" type="button" data-group="role" data-value="data_analyst">Data Analyst</button>
-          </div>
-        </div>
-
         <button class="reset_btn" type="button" data-reset-filters>Сбросить фильтры</button>
       </div>
 
@@ -70,11 +60,10 @@
               <th>Проект</th>
               <th>Компетенции</th>
               <th>Описание</th>
-              <th>Роль</th>
             </tr>
           </thead>
           <tbody>
-            <tr data-competencies="product_analytics,funnel_analysis,ab_testing,sql_python" data-role="product_analyst">
+            <tr data-competencies="product_analytics,funnel_analysis,ab_testing,sql_python">
               <td>
                 <div class="project_name">Оптимизация пути клиента в сделке (M2)</div>
               </td>
@@ -91,10 +80,9 @@
                 Я провела воронковый и когортный анализ, сегментировала пользователей, сформировала гипотезы и сопровождала A/B тесты.
                 На выходе команда внедрила часть изменений в прод, процесс сделки стал заметно быстрее.
               </td>
-              <td><span class="role">Product Analyst</span></td>
             </tr>
 
-            <tr data-competencies="bi,superset_tableau,data_marts,automation" data-role="product_data_analyst">
+            <tr data-competencies="bi,superset_tableau,data_marts,automation">
               <td>
                 <div class="project_name">Self-service BI и KPI-дашборды (M2)</div>
               </td>
@@ -111,10 +99,9 @@
                 Это сняло зависимость от постоянных ad-hoc запросов и ускорило цикл принятия решений.
                 Дополнительно автоматизировала регулярную отчетность.
               </td>
-              <td><span class="role">Product/Data Analyst</span></td>
             </tr>
 
-            <tr data-competencies="predictive_analytics,etl,data_quality,retail" data-role="data_analyst">
+            <tr data-competencies="predictive_analytics,etl,data_quality,retail">
               <td>
                 <div class="project_name">Улучшение предиктивной модели в Retail SaaS</div>
               </td>
@@ -131,10 +118,9 @@
                 Настроила мониторинг ключевых этапов, что позволило стабилизировать модель и повысить бизнес-эффект.
                 Итогом стало существенное улучшение показателя saved sales.
               </td>
-              <td><span class="role">Data Analyst</span></td>
             </tr>
 
-            <tr data-competencies="risk_analytics,dash_python,gini_psi_ssi,regulatory_reporting" data-role="data_analyst">
+            <tr data-competencies="risk_analytics,dash_python,gini_psi_ssi,regulatory_reporting">
               <td>
                 <div class="project_name">BI-платформа мониторинга риск-моделей (ВТБ)</div>
               </td>
@@ -151,7 +137,6 @@
                 Автоматизировала сбор и расчет показателей, что кратно ускорило цикл проверки качества моделей для DS-команды
                 и упростило подготовку регуляторных форм.
               </td>
-              <td><span class="role">Data Analyst</span></td>
             </tr>
           </tbody>
         </table>

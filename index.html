@@ -41,22 +41,18 @@
         <div class="filter_block">
           <p>Фильтр: Компетенции</p>
           <div class="filter_chips">
-            <button class="filter_chip purple" type="button" data-group="competency" data-value="product_analytics">product analytics</button>
+            <button class="filter_chip purple" type="button" data-group="competency" data-value="cohort_analytics">cohort analysis</button>
             <button class="filter_chip violet" type="button" data-group="competency" data-value="funnel_analysis">funnel analysis</button>
             <button class="filter_chip orange" type="button" data-group="competency" data-value="ab_testing">A/B testing</button>
-            <button class="filter_chip pink" type="button" data-group="competency" data-value="sql_python">SQL/Python</button>
+            <button class="filter_chip pink" type="button" data-group="competency" data-value="sql">SQL</button>
+            <button class="filter_chip green" type="button" data-group="competency" data-value="python">Python</button>
             <button class="filter_chip purple" type="button" data-group="competency" data-value="bi">BI</button>
-            <button class="filter_chip violet" type="button" data-group="competency" data-value="superset_tableau">superset/tableau</button>
-            <button class="filter_chip orange" type="button" data-group="competency" data-value="data_marts">data marts</button>
-            <button class="filter_chip pink" type="button" data-group="competency" data-value="automation">автоматизация</button>
+            <button class="filter_chip violet" type="button" data-group="competency" data-value="superset">Superset</button>
+            <button class="filter_chip pink" type="button" data-group="competency" data-value="tableau">Tableau</button>
+            <button class="filter_chip orange" type="button" data-group="competency" data-value="dwh">DWH</button>
             <button class="filter_chip purple" type="button" data-group="competency" data-value="predictive_analytics">predictive analytics</button>
             <button class="filter_chip violet" type="button" data-group="competency" data-value="etl">ETL</button>
-            <button class="filter_chip orange" type="button" data-group="competency" data-value="data_quality">data quality</button>
-            <button class="filter_chip pink" type="button" data-group="competency" data-value="retail">retail</button>
-            <button class="filter_chip purple" type="button" data-group="competency" data-value="risk_analytics">risk analytics</button>
-            <button class="filter_chip violet" type="button" data-group="competency" data-value="dash_python">dash/python</button>
-            <button class="filter_chip orange" type="button" data-group="competency" data-value="gini_psi_ssi">GINI/PSI/SSI</button>
-            <button class="filter_chip pink" type="button" data-group="competency" data-value="regulatory_reporting">regulatory reporting</button>
+            <button class="filter_chip green" type="button" data-group="competency" data-value="ml">ML</button>
           </div>
         </div>
 
@@ -73,16 +69,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr data-competencies="product_analytics,funnel_analysis,ab_testing,sql_python">
+            <tr data-competencies="cohort_analysis,funnel_analysis,ab_testing,sql,python">
               <td>
                 <div class="project_name">Оптимизация пути клиента в сделке</div>
               </td>
               <td>
                 <div class="tags">
-                  <span class="tag purple">product analytics</span>
-                  <span class="tag violet">funnel analysis</span>
+                  <span class="tag purple">cohort analysis</span>
                   <span class="tag orange">A/B testing</span>
-                  <span class="tag pink">SQL/Python</span>
+                  <span class="tag pink">SQL</span>
+                  <span class="tag green">Python</span>
                 </div>
               </td>
               <td>
@@ -91,52 +87,49 @@
               </td>
             </tr>
 
-            <tr data-competencies="product_analytics,funnel_analysis,ab_testing,sql_python">
+            <tr data-competencies="funnel_analysis,sql,python">
               <td>
-                <div class="project_name">Сегментация пользователей</div>
+                <div class="project_name">RFM-сегментация пользователей</div>
               </td>
               <td>
                 <div class="tags">
-                  <span class="tag purple">product analytics</span>
                   <span class="tag violet">funnel analysis</span>
-                  <span class="tag orange">A/B testing</span>
-                  <span class="tag pink">SQL/Python</span>
+                  <span class="tag pink">SQL</span>
+                  <span class="tag green">Python</span>
                 </div>
               </td>
               <td>
-                Исследование поведение частотных риелторов (региональность/тип недвижимости/проникновение в другие продукты сервиса/сложность сделки/роль агента)
+                Исследование поведение частотных риелторов (региональность/тип недвижимости/проникновение в другие продукты сервиса/сложность сделки/роль агента). 
+                Результаты исследования применялись в тестировании маркетинговых коммуникаций.
               </td>
             </tr>
 
-            <tr data-competencies="bi,superset_tableau,data_marts,automation">
+            <tr data-competencies="bi,superset,dwh">
               <td>
-                <div class="project_name">Self-service BI и KPI-дашборды</div>
+                <div class="project_name">Разработка системы метрик и управленческой отчетности</div>
               </td>
               <td>
                 <div class="tags">
                   <span class="tag purple">BI</span>
-                  <span class="tag violet">superset/tableau</span>
-                  <span class="tag orange">data marts</span>
-                  <span class="tag pink">автоматизация</span>
+                  <span class="tag violet">Superset</span>
+                  <span class="tag orange">DWH</span>
                 </div>
               </td>
               <td>
-                С нуля построила контур продуктовой отчетности для команд и руководителей: витрины, единые определения KPI и набор дашбордов.
-                Это сняло зависимость от постоянных ad-hoc запросов и ускорило цикл принятия решений.
-                Дополнительно автоматизировала регулярную отчетность.
+                Разработка дерева метрик. Формализация методолгии расчета ключевых метрик.
+                Построение отчетов в Superset. Отчеты были снабжены документацией с описанием метрик, фильтров и примерами сценариев использованию отчетов. 
+                Для пользователей проводились вебинары по использованию отчетов с разбором кейсов расчета метрик. 
               </td>
             </tr>
 
-            <tr data-competencies="predictive_analytics,etl,data_quality,retail">
+            <tr data-competencies="ml,etl">
               <td>
                 <div class="project_name">Кластеризация магазинов и оценка эффекта от внедрения ПО в них</div>
               </td>
               <td>
                 <div class="tags">
-                  <span class="tag purple">predictive analytics</span>
+                  <span class="tag green">ml</span>
                   <span class="tag violet">ETL</span>
-                  <span class="tag orange">data quality</span>
-                  <span class="tag pink">retail</span>
                 </div>
               </td>
               <td>
@@ -144,14 +137,13 @@
               </td>
             </tr>
 
-            <tr data-competencies="predictive_analytics">
+            <tr data-competencies="ab_testing">
               <td>
                 <div class="project_name">Проверка гипотез, связанных с UX-изменениями</div>
               </td>
               <td>
                 <div class="tags">
-                  <span class="tag purple">predictive analytics</span>
-                  <span class="tag violet">product analytics</span>
+                  <span class="tag orange">A/B testing</span>
                 </div>
               </td>
               <td>
@@ -160,13 +152,13 @@
             </tr>
 
             
-            <tr data-competencies="predictive_analytics">
+            <tr data-competencies="sql,">
               <td>
                 <div class="project_name">Построение дерева метрик и формализация методологии расчета ключевых метрик</div>
               </td>
               <td>
                 <div class="tags">
-                  <span class="tag purple">predictive analytics</span>
+                  <span class="tag pink">SQL</span>
                   <span class="tag violet">product analytics</span>
                 </div>
               </td>
@@ -190,16 +182,14 @@
               </td>
             </tr>
 
-            <tr data-competencies="risk_analytics,dash_python,gini_psi_ssi,regulatory_reporting">
+            <tr data-competencies="python,dwh">
               <td>
                 <div class="project_name">BI-платформа мониторинга риск-моделей</div>
               </td>
               <td>
                 <div class="tags">
-                  <span class="tag purple">risk analytics</span>
-                  <span class="tag violet">dash/python</span>
-                  <span class="tag orange">GINI/PSI/SSI</span>
-                  <span class="tag pink">regulatory reporting</span>
+                  <span class="tag purple">dwh</span>
+                  <span class="tag violet">python</span>
                 </div>
               </td>
               <td>

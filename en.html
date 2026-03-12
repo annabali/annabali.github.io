@@ -32,7 +32,7 @@
     <h1>Case Portfolio</h1>
 
     <p class="lead">
-      This table contains selected analytics projects I worked on.
+      This table contains key analytics projects I have worked on.
       Each case highlights competencies and project context.
     </p>
 
@@ -41,21 +41,18 @@
         <div class="filter_block">
           <p>Filter: Competencies</p>
           <div class="filter_chips">
-            <button class="filter_chip purple" type="button" data-group="competency" data-value="product_analytics">product analytics</button>
+            <button class="filter_chip purple" type="button" data-group="competency" data-value="cohort_analysis">cohort analysis</button>
             <button class="filter_chip violet" type="button" data-group="competency" data-value="funnel_analysis">funnel analysis</button>
+            <button class="filter_chip green" type="button" data-group="competency" data-value="airflow">Airflow</button>
             <button class="filter_chip orange" type="button" data-group="competency" data-value="ab_testing">A/B testing</button>
-            <button class="filter_chip pink" type="button" data-group="competency" data-value="sql_python">SQL/Python</button>
+            <button class="filter_chip pink" type="button" data-group="competency" data-value="sql">SQL</button>
+            <button class="filter_chip green" type="button" data-group="competency" data-value="python">Python</button>
             <button class="filter_chip purple" type="button" data-group="competency" data-value="bi">BI</button>
-            <button class="filter_chip violet" type="button" data-group="competency" data-value="superset_tableau">superset/tableau</button>
-            <button class="filter_chip orange" type="button" data-group="competency" data-value="data_marts">data marts</button>
-            <button class="filter_chip pink" type="button" data-group="competency" data-value="automation">automation</button>
+            <button class="filter_chip violet" type="button" data-group="competency" data-value="superset">Superset</button>
+            <button class="filter_chip pink" type="button" data-group="competency" data-value="tableau">Tableau</button>
+            <button class="filter_chip orange" type="button" data-group="competency" data-value="dwh">DWH</button>
             <button class="filter_chip violet" type="button" data-group="competency" data-value="etl">ETL</button>
-            <button class="filter_chip orange" type="button" data-group="competency" data-value="data_quality">data quality</button>
-            <button class="filter_chip pink" type="button" data-group="competency" data-value="retail">retail</button>
-            <button class="filter_chip purple" type="button" data-group="competency" data-value="risk_analytics">risk analytics</button>
-            <button class="filter_chip violet" type="button" data-group="competency" data-value="dash_python">dash/python</button>
-            <button class="filter_chip orange" type="button" data-group="competency" data-value="gini_psi_ssi">GINI/PSI/SSI</button>
-            <button class="filter_chip pink" type="button" data-group="competency" data-value="regulatory_reporting">regulatory reporting</button>
+            <button class="filter_chip green" type="button" data-group="competency" data-value="ml">ML</button>
           </div>
         </div>
 
@@ -72,77 +69,187 @@
             </tr>
           </thead>
           <tbody>
-            <tr data-competencies="product_analytics,funnel_analysis,ab_testing,sql_python">
+            <tr data-competencies="cohort_analysis,sql,python">
               <td>
-                <div class="project_name">Deal Journey Optimization (M2)</div>
+                <div class="project_name">Deal Journey Optimization</div>
               </td>
               <td>
                 <div class="tags">
-                  <span class="tag purple">product analytics</span>
-                  <span class="tag violet">funnel analysis</span>
-                  <span class="tag orange">A/B testing</span>
-                  <span class="tag pink">SQL/Python</span>
+                  <span class="tag purple">cohort analysis</span>
+                  <span class="tag pink">SQL</span>
+                  <span class="tag green">Python</span>
                 </div>
               </td>
               <td>
-                The goal was to reduce time-to-close and fix drop-offs across the transaction funnel.
-                I performed funnel and cohort analysis, segmented users, proposed product hypotheses, and supported A/B tests.
-                A subset of changes was shipped to production and improved the customer journey.
+                I conducted a deep NPS analysis and identified critical bottlenecks in the deal process that affected customer loyalty.
+                Based on the findings, I proposed a solution that reduced deal completion time and improved customer satisfaction.
               </td>
             </tr>
 
-            <tr data-competencies="bi,superset_tableau,data_marts,automation">
+            <tr data-competencies="ab_testing,sql,python,funnel_analysis">
               <td>
-                <div class="project_name">Self-service BI and KPI Dashboards (M2)</div>
+                <div class="project_name">Hypothesis Testing for UX Changes</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag orange">A/B testing</span>
+                  <span class="tag pink">SQL</span>
+                  <span class="tag violet">funnel analysis</span>
+                  <span class="tag green">Python</span>
+                </div>
+              </td>
+              <td>
+                I built a full hypothesis testing cycle: from data-driven bottleneck discovery to experiment design and statistical validation.
+                For example, a landing page redesign increased conversion to booking a deal.
+              </td>
+            </tr>
+
+            <tr data-competencies="funnel_analysis,sql,python">
+              <td>
+                <div class="project_name">RFM User Segmentation</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag pink">SQL</span>
+                  <span class="tag green">Python</span>
+                </div>
+              </td>
+              <td>
+                The segmentation results were used in marketing communication experiments and led to improved repeat-deal conversion,
+                while optimizing marketing spend by replacing mass campaigns with targeted offers.
+              </td>
+            </tr>
+
+            <tr data-competencies="sql,python">
+              <td>
+                <div class="project_name">ABCD User Segmentation</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag violet">funnel analysis</span>
+                  <span class="tag pink">SQL</span>
+                  <span class="tag green">Python</span>
+                </div>
+              </td>
+              <td>
+                I implemented ABCD segmentation and identified behavioral patterns for each group (session frequency, key feature usage,
+                time to first deal). The findings became a foundation for sales and marketing backlog prioritization.
+              </td>
+            </tr>
+
+            <tr data-competencies="bi,dwh">
+              <td>
+                <div class="project_name">Metrics Tree Development</div>
               </td>
               <td>
                 <div class="tags">
                   <span class="tag purple">BI</span>
-                  <span class="tag violet">superset/tableau</span>
-                  <span class="tag orange">data marts</span>
-                  <span class="tag pink">automation</span>
+                  <span class="tag orange">DWH</span>
                 </div>
               </td>
               <td>
-                I built product reporting from scratch: data marts, unified KPI definitions, and dashboards for teams and leadership.
-                This reduced dependency on ad-hoc requests and shortened decision cycles.
-                I also automated recurring reporting flows.
+                I consolidated disconnected metrics into a single metrics tree and linked top-level business goals (revenue)
+                with concrete product user actions. Root-cause analysis now takes minutes instead of days.
               </td>
             </tr>
 
-            <tr data-competencies="etl,data_quality,retail">
+            <tr data-competencies="bi,superset,dwh">
               <td>
-                <div class="project_name">Predictive Model Improvement in Retail SaaS</div>
+                <div class="project_name">Self-Service Analytics Implementation</div>
               </td>
               <td>
                 <div class="tags">
+                  <span class="tag purple">BI</span>
+                  <span class="tag violet">Superset</span>
+                  <span class="tag orange">DWH</span>
+                </div>
+              </td>
+              <td>
+                I designed and launched an interactive dashboard ecosystem for marketing, sales, C-level, finance, and back-office teams.
+                I automated 80% of recurring reporting and prepared full documentation on metrics and analysis scenarios.
+              </td>
+            </tr>
+
+            <tr data-competencies="bi,superset,dwh">
+              <td>
+                <div class="project_name">Building a Data-Driven Decision Culture</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag purple">BI</span>
+                  <span class="tag violet">Superset</span>
+                  <span class="tag orange">DWH</span>
+                </div>
+              </td>
+              <td>
+                I organized hands-on workshops based on real business cases, enabling teams to shift to self-service analytics
+                and reducing ad-hoc requests to analysts by 70%.
+              </td>
+            </tr>
+
+            <tr data-competencies="sql,airflow,dwh">
+              <td>
+                <div class="project_name">DWH and ETL Pipeline Development</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag pink">SQL</span>
+                  <span class="tag green">Airflow</span>
+                  <span class="tag violet">DWH</span>
+                </div>
+              </td>
+              <td>
+                I built a full DWH stack from RAW export layers to CDM and aggregated reporting marts.
+                I handled schema design, deduplication, data recovery and mapping, versioning,
+                incremental refresh, and orchestration hierarchy.
+              </td>
+            </tr>
+
+            <tr data-competencies="ml,etl">
+              <td>
+                <div class="project_name">Anomaly Prediction Model Improvement in Retail</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag green">ML</span>
                   <span class="tag violet">ETL</span>
-                  <span class="tag orange">data quality</span>
-                  <span class="tag pink">retail</span>
                 </div>
               </td>
               <td>
-                To improve shelf-availability predictions, I redesigned analytical pipelines and introduced stronger data quality controls.
-                I also set up monitoring for critical processing stages, which stabilized model behavior and improved business impact.
+                I improved feature engineering by adding contextual factors, which increased prediction quality.
               </td>
             </tr>
 
-            <tr data-competencies="risk_analytics,dash_python,gini_psi_ssi,regulatory_reporting">
+            <tr data-competencies="sql,airflow,dwh">
               <td>
-                <div class="project_name">Risk Model Monitoring BI Platform (VTB)</div>
+                <div class="project_name">Data Error Alerting Setup</div>
               </td>
               <td>
                 <div class="tags">
-                  <span class="tag purple">risk analytics</span>
-                  <span class="tag violet">dash/python</span>
-                  <span class="tag orange">GINI/PSI/SSI</span>
-                  <span class="tag pink">regulatory reporting</span>
+                  <span class="tag pink">SQL</span>
+                  <span class="tag green">Airflow</span>
+                  <span class="tag violet">DWH</span>
                 </div>
               </td>
               <td>
-                I developed a BI platform for PD/LGD scorecard monitoring with statistical quality tests and scheduled reporting.
-                By automating data collection and metric calculation, I significantly accelerated model quality checks
-                for the DS team and simplified regulatory reporting preparation.
+                I configured automated checks for critical pipelines with delivery to a Telegram bot.
+              </td>
+            </tr>
+
+            <tr data-competencies="python,dwh">
+              <td>
+                <div class="project_name">Risk Model Monitoring BI Platform</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag purple">DWH</span>
+                  <span class="tag violet">Python</span>
+                </div>
+              </td>
+              <td>
+                I developed a BI platform for PD/LGD scorecard monitoring with statistical tests and recurring reports.
+                I automated metric collection and calculations, significantly speeding up model quality checks
+                for the DS team and simplifying regulatory reporting.
               </td>
             </tr>
           </tbody>

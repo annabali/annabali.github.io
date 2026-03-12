@@ -43,6 +43,7 @@
           <div class="filter_chips">
             <button class="filter_chip purple" type="button" data-group="competency" data-value="cohort_analytics">cohort analysis</button>
             <button class="filter_chip violet" type="button" data-group="competency" data-value="funnel_analysis">funnel analysis</button>
+            <button class="filter_chip green" type="button" data-group="competency" data-value="airflow">Airflow</button>
             <button class="filter_chip orange" type="button" data-group="competency" data-value="ab_testing">A/B testing</button>
             <button class="filter_chip pink" type="button" data-group="competency" data-value="sql">SQL</button>
             <button class="filter_chip green" type="button" data-group="competency" data-value="python">Python</button>
@@ -68,14 +69,13 @@
             </tr>
           </thead>
           <tbody>
-            <tr data-competencies="cohort_analysis,funnel_analysis,ab_testing,sql,python">
+            <tr data-competencies="cohort_analysis,sql,python">
               <td>
                 <div class="project_name">Оптимизация пути клиента в сделке</div>
               </td>
               <td>
                 <div class="tags">
                   <span class="tag purple">cohort analysis</span>
-                  <span class="tag orange">A/B testing</span>
                   <span class="tag pink">SQL</span>
                   <span class="tag green">Python</span>
                 </div>
@@ -83,6 +83,24 @@
               <td>
                 Провела комплексный анализ метрики NPS, выявив критические «узкие места» в процессе оформления сделки, влияющие на лояльность пользователей.
                 По итогам исследования предложила решение, которое позволило сократить время на проведение сделки и повысить метрику удовлетворенности клиентов.
+              </td>
+            </tr>
+
+            <tr data-competencies="ab_testing,sql,python,funnel_analysis">
+              <td>
+                <div class="project_name">Проверка гипотез, связанных с UX-изменениями</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag orange">A/B testing</span>
+                  <span class="tag pink">SQL</span>
+                  <span class="tag violet">funnel analysis</span>
+                  <span class="tag green">Python</span>
+                </div>
+              </td>
+              <td>
+                Выстроила полный цикл проверки гипотез: от поиска «узких мест» в воронке (через данные) до дизайна экспериментов и анализа статистической значимости.
+                Например, редизайн лендинга позволил увеличить конверсию в запись на сделку.
               </td>
             </tr>
 
@@ -131,9 +149,29 @@
               </td>
               <td>
                 Спроектировала и внедрила экосистему интерактивных дашбордов, закрыв потребность в оперативной отчетности для маркетинга/продаж/С-level/финансов/бэкофиса.
+                Автоматизировала 80% регулярной отчетности.
                 Подготовила полную базу знаний по метрикам и сценариям использования данных, что позволило пользователям работать с отчетами без помощи аналитиков.
               </td>
             </tr> 
+            
+            <tr data-competencies="sql,airflow,dwh">
+              <td>
+                <div class="project_name">Построение DWH и ETL-пайплайнов</div>
+              </td>
+              <td>
+                <div class="tags">
+                  <span class="tag pink">SQL</span>
+                  <span class="tag green">Airflow</span>
+                  <span class="tag violet">DWH</span>
+                </div>
+              </td>
+              <td>
+                Разработала полную систему DWH от экспортных RAW слоев до CDM витрин и агрегатных витрин для отчетности. 
+                Решала задачи описания полей, дедупликации записей, восстановления и мэппинга данных, версионирования и инкрементального обновления, иерархичного запуска сборки слоев. 
+                Все слои и витрины были снабжены документацией.
+              </td>
+            </tr>
+            
             <tr data-competencies="ml,etl">
               <td>
                 <div class="project_name">Улучшение модели предсказания аномалии в ритейле</div>
@@ -145,40 +183,23 @@
                 </div>
               </td>
               <td>
-                Провела глубокую работу с признаками, добавив в модель контекстуальные факторы, что повысило качество предсказаний  
+                Провела глубокую работу с признаками, добавив в модель контекстуальные факторы, что повысило качество предсказаний.  
               </td>
             </tr>
 
-            <tr data-competencies="ab_testing">
+            <tr data-competencies="sql,airflow,dwh">
               <td>
-                <div class="project_name">Проверка гипотез, связанных с UX-изменениями</div>
-              </td>
-              <td>
-                <div class="tags">
-                  <span class="tag orange">A/B testing</span>
-                </div>
-              </td>
-              <td>
-                Выстроила полный цикл проверки гипотез: от поиска «узких мест» в воронке (через данные) до дизайна экспериментов и анализа статистической значимости.
-                Например, редизайн лендинга позволил увеличить конверсию в запись на сделку.
-              </td>
-            </tr>
-
-            
-            <tr data-competencies="sql,">
-              <td>
-                <div class="project_name">Построение DWH и ETL-пайплайнов</div>
+                <div class="project_name">Настройка алертинга для выявления ошибок в данных</div>
               </td>
               <td>
                 <div class="tags">
                   <span class="tag pink">SQL</span>
+                  <span class="tag green">Airflow</span>
                   <span class="tag violet">DWH</span>
                 </div>
               </td>
               <td>
-                Разработала полную систему DWH от экспортных RAW слоев до CDM витрин и агрегатных витрин для отчетности. 
-                Решала задачи описания полей, дедупликации записей, восстановления и мэппинга данных, версионирования и инкрементального обновления, иерархичного запуска сборки слоев. 
-                Все слои и витрины были снабжены документацией.
+                Настроила автоматические проверки для критических пайплайнов с отправкой результата в Telegram-бот.
               </td>
             </tr>
 

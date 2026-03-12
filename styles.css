@@ -145,10 +145,10 @@ a {
   transform: translateY(-1px);
 }
 
-.filter_chip.purple { background: #5b4a7e; }
-.filter_chip.violet { background: #6f4d8c; }
-.filter_chip.orange { background: #a65b4a; }
-.filter_chip.pink { background: #824d73; }
+.filter_chip.purple { background: #3f4f8a; }
+.filter_chip.violet { background: #5e4689; }
+.filter_chip.orange { background: #8b5a2b; }
+.filter_chip.pink { background: #7a3f62; }
 
 .reset_btn {
   margin-top: 12px;
@@ -225,10 +225,10 @@ thead tr th:last-child {
   color: #f4f4f2;
 }
 
-.tag.purple { background: #5b4a7e; }
-.tag.violet { background: #6f4d8c; }
-.tag.orange { background: #a65b4a; }
-.tag.pink { background: #824d73; }
+.tag.purple { background: #3f4f8a; }
+.tag.violet { background: #5e4689; }
+.tag.orange { background: #8b5a2b; }
+.tag.pink { background: #7a3f62; }
 
 .empty_state {
   margin: 10px 2px 0;

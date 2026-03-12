@@ -149,6 +149,7 @@ a {
 .filter_chip.violet { background: #5e4689; }
 .filter_chip.orange { background: #8b5a2b; }
 .filter_chip.pink { background: #7a3f62; }
+.filter_chip.green { background: #2f6d55; }
 
 .reset_btn {
   margin-top: 12px;
@@ -229,6 +230,7 @@ thead tr th:last-child {
 .tag.violet { background: #5e4689; }
 .tag.orange { background: #8b5a2b; }
 .tag.pink { background: #7a3f62; }
+.tag.green { background: #2f6d55; }
 
 .empty_state {
   margin: 10px 2px 0;
